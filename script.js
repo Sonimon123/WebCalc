@@ -18,6 +18,21 @@ let val1 = 0;
 let operator = "+";
 let val2 = 0;
 
-function operate(expression) {
-    
+function operate(num1, operator, num2) {
+    switch(operator) {
+        case "+":
+            return add(num1, num2);
+            break;
+        case "-":
+            return subtract(num1, num2);
+            break;
+        case "*":
+            return multiply(num1, num2);
+            break;
+        case "/":
+            return divide(num1, num2);
+            break;
+        default:
+            return 0;
+    }
 }
