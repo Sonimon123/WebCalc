@@ -1,0 +1,16 @@
+.display {
+    border: 2px solid black;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+}
+
+.button {
+    flex: 1;
+    border: 1px solid black;
+    text-align: center;
+}
