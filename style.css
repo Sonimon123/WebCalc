@@ -1,16 +1,44 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.calc {
+    height: 100%;
+}
+
 .display {
     border: 2px solid black;
+    min-height: 25px;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-
+    flex-wrap: wrap;
+    height: 80vh;
 }
 
 .button {
-    flex: 1;
+    display: flex;
+    flex: 1 1 20%;
     border: 1px solid black;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.button.sp {
+    font-size: 30px;
+    font-weight: bold;
+    background-color: turquoise;
+}
+
+.button.eq {
+    background-color: orange;
+}
+
+.button:hover {
+    filter: brightness(85%);
 }
