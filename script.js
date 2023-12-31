@@ -50,7 +50,7 @@ calc.addEventListener('click', (event) => {
         operator = target.textContent;
         //If both a first and second operand have been given
         if (val2 != "") {
-            let res = operate(Number(val1), operator, Number(val2));
+            let res = String(operate(Number(val1), operator, Number(val2)));
             val1 = res;
             display.textContent = res;
             val2 = "";
@@ -66,7 +66,7 @@ calc.addEventListener('click', (event) => {
     } else if (target.textContent == "=") {
         if (val1 != "" && operator != "" && display.textContent != "") {
             val2 = display.textContent;
-            let res = operate(Number(val1), operator, Number(val2));
+            let res = String(operate(Number(val1), operator, Number(val2)));
             display.textContent = res;
             val1 = "";
             operator = "";
@@ -75,12 +75,17 @@ calc.addEventListener('click', (event) => {
     } else {
         // If an Operator has not been set, edit val1. Otherwise, edit val2.
         if (operator == "") {
-            val1 += target.textContent; //Text Concatenation
-            display.textContent = val1;
+            if (!(target.textContent == "." && val1.includes("."))) {
+                val1 += target.textContent; //Text Concatenation
+                display.textContent = val1;
+            }
+
         }
         else {
-            val2 += target.textContent;
-            display.textContent = val2;
+            if (!(target.textContent == "." && val2.includes("."))) {
+                val2 += target.textContent;
+                display.textContent = val2;
+            }
         }
     }
 

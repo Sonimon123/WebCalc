@@ -1,6 +1,6 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .calc {
@@ -8,8 +8,10 @@ body {
 }
 
 .display {
+    display: flex;
     border: 2px solid black;
-    min-height: 25px;
+    min-height: 40px;
+    align-items: center;
 }
 
 .row {
@@ -22,7 +24,7 @@ body {
 
 .button {
     display: flex;
-    flex: 1 1 20%;
+    flex: 1 1 25%;
     border: 1px solid black;
     justify-content: center;
     align-items: center;
